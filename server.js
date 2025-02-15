@@ -6,8 +6,11 @@ import bodyParser from 'body-parser';
 import personRouter from './Routes/personRoutes.js';
 import manuRouter from './Routes/manuRoutes.js';
 
+import dotenv from "dotenv";
+dotenv.config();
+
 const app = express();
-/*dotenv.config();*/
+
 
 const PORT = process.env.PORT || 3009;
 
