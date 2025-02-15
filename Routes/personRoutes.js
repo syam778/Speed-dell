@@ -46,17 +46,17 @@ personRouter.post('/', async (req, res) => { //endpoint post method
     }
   
   });
-  personRouter.put('/:id',async(req,res) =>{
+  personRouter.put('/:id',async(req,res) =>{ //id = variabul(paramiter)
     try {
-        const id = req.params.id;
-        const updatedata = req.body;
+        const id = req.params.id; //paramiter
+        const updatedata = req.body; //body-parser process data
         
-        const response = await person.findByIdAndUpdate(id,updatedata,{
+        const response = await person.findByIdAndUpdate(id,updatedata,{ //
             new : true,
-            runValidators:true
+            runValidators:true //model validators check
         })
         if(!response){
-            res.status(400).json({error:'person nut fund'})
+            res.status(400).json({error:'person nut fund'}) //not avalebul id
         }
         console.log('data update')
         res.status(200).json(response)

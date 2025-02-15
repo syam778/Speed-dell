@@ -48,8 +48,8 @@ app.get('/chicken', (req, res) => {
   };
   res.json(chicken);
 });
-app.use('/person',personRouter)
-app.use('/manu',manuRouter)
+app.use('/person',personRouter)//personRouter 
+app.use('/manu',manuRouter) //manuRouter add
 
 
 // Start Server
